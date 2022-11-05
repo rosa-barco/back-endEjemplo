@@ -1,0 +1,30 @@
+﻿@model List<BackendEjemplo.Models.pelicula>
+
+
+@{
+    ViewBag.Title = "MuestraPeliculas";
+}
+
+<h2>MuestraPeliculas</h2>
+
+<table class="table table-striped">
+    <thead>
+        <th>Titulo</th>
+        <th>Duracion</th>
+        <th>Pais</th>
+        <th>Lanzamiento</th>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+
+
+        <tr>
+            <td @item.Titulo ></td>
+            <td @item.Duracion ></td>
+            <td @item.Pais ></td>
+            <td @item.Publicacion.ToString("dd/MM/yyyy") ></td>
+        </tr>
+        }
+    </tbody>
+</table>
